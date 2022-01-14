@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+
+int main()
+{
+ int x, wart_bin, wart_dec = 0, b = 1, y;
+
+printf("Wpisz liczbe w systemie binarnym: \n");
+scanf("%d", &x);
+wart_bin = x;
+while (x > 0)
+{
+  y = x % 10;
+  wart_dec = wart_dec + y * b;
+  x = x / 10 ;
+  b = b * 2;
+}
+  printf("Wartosc decymalna twojej liczby: %d \n", wart_dec);
+}
+
